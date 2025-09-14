@@ -197,4 +197,20 @@
     "modal"   : { "value": "1100" },
     "toast"   : { "value": "1200" }
   }
+  ,
+  "component": {
+    "page": {
+      "home": {
+        "title": {
+          "height": { "value": "3rem" }
+          }
+        },
+        "cards": {
+          "rows"  : { "value": "1" }
+        }
+    },
+    "card": {
+      "height": { "value": "420px", "type": "dimension" }
+    }
+  }
 }

@@ -49,6 +49,9 @@
   --z-index-dropdown: 1000;
   --z-index-modal: 1100;
   --z-index-toast: 1200;
+  --component-page-home-title-height: 3rem;
+  --component-page-cards-rows: 1;
+  --component-card-height: 420px;
   --color-role-background-light: var(--color-palette-white);
   --color-role-background-dark: var(--color-palette-dark-blue);
   --color-role-foreground-light: var(--color-palette-dark-blue);
@@ -73,6 +76,7 @@
   --surface-2-bg-light: var(--color-palette-gray-100);
   --surface-2-shadow: var(--shadow-md);
   --surface-3-shadow: var(--shadow-lg);
+  --border-radius: var(--radius-md);
   --surface-1-bg-light: var(--color-role-background-light);
   --surface-1-bg-dark: var(--color-role-background-dark);
   --surface-1-fg-light: var(--color-role-foreground-light);
@@ -87,5 +91,4 @@
   --surface-3-fg-dark: var(--color-role-foreground-dark);
   --surface-3-border-light: var(--color-role-border-light);
   --surface-3-border-dark: var(--color-role-border-dark);
-  --border-radius: var(--radius-md);
 }
