@@ -33,7 +33,11 @@
   --surface-3-border        : var(--surface-3-border-light);
   --surface-3-shadow        : var(--surface-3-shadow);
   --line-height-body        : var(--font-line-height-base);
-  --line-height-heading     : 1.25;
+
+  --card-height             : var(--component-card-height);
+  --home-title-height       : var(--component-page-home-title-height);
+  --home-cards-rows         : var(--component-page-cards-rows);
+  --home-cards-height       : calc(var(--home-cards-rows) * var(--card-height) + var(--spacing-xl) * 2 + var(--home-title-height));
 }
 
 @theme inline {
@@ -65,7 +69,6 @@
   --margin-md       : var(--space-md);
   --margin-lg       : var(--space-lg);
   --margin-xl       : var(--space-xl);
-  --font-size-xl    : 3rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -97,4 +100,35 @@ body {
   color      : var(--foreground);
   font-family: var(--font-family-sans);
   line-height: var(--font-line-height-base);
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.skeleton {
+  position        : relative;
+  overflow        : hidden;
+  background-color: var(--surface-2-bg);
+}
+.skeleton::after {
+  content   : "";
+  position  : absolute;
+  inset     : 0;
+  transform : translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent);
+  animation : shimmer 1.2s infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .skeleton::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after { animation: none; }
 }
