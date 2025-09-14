@@ -1,3 +1,5 @@
 export { default as Card } from './card'
-export { default as CardTitle } from './card-title'
-export { default as CardContent } from './card-content'
+export { default as CardHeader } from './card-header'
+export { default as CardBody } from './card-body'
+export { default as CardImage } from './card-image'
+export * from './variant'
