@@ -2,26 +2,99 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background              : var(--color-role-background-light);
+  --foreground              : var(--color-role-foreground-light);
+  --accent                  : var(--color-role-accent-light);
+  --border-color            : var(--color-role-border-light);
+  --color-brand             : var(--color-palette-brand);
+  --color-ds-white          : var(--color-palette-white);
+  --color-ds-red            : var(--color-palette-red);
+  --color-ds-blue           : var(--color-palette-blue);
+  --color-ds-dark-red       : var(--color-palette-dark-red);
+  --color-ds-dark-blue      : var(--color-palette-dark-blue);
+  --color-ds-darker-red     : var(--color-palette-darker-red);
+  --color-ds-darker-blue    : var(--color-palette-darker-blue);
+  --color-default-bg        : var(--color-intent-default-bg-light);
+  --color-default-fg        : var(--color-intent-default-fg-light);
+  --color-default-border    : var(--color-intent-default-border-light);
+  --color-destructive-bg    : var(--color-intent-destructive-bg-light);
+  --color-destructive-fg    : var(--color-intent-destructive-fg-light);
+  --color-destructive-border: var(--color-intent-destructive-border-light);
+  --surface-1-bg            : var(--surface-1-bg-light);
+  --surface-1-fg            : var(--surface-1-fg-light);
+  --surface-1-border        : var(--surface-1-border-light);
+  --surface-1-shadow        : var(--surface-1-shadow);
+  --surface-2-bg            : var(--surface-2-bg-light);
+  --surface-2-fg            : var(--surface-2-fg-light);
+  --surface-2-border        : var(--surface-2-border-light);
+  --surface-2-shadow        : var(--surface-2-shadow);
+  --surface-3-bg            : var(--surface-3-bg-light);
+  --surface-3-fg            : var(--surface-3-fg-light);
+  --surface-3-border        : var(--surface-3-border-light);
+  --surface-3-shadow        : var(--surface-3-shadow);
+  --line-height-body        : var(--font-line-height-base);
+  --line-height-heading     : 1.25;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans       : var(--font-geist-sans);
-  --font-mono       : var(--font-geist-mono);
+  --font-inter      : var(--font-inter);
+  --text-xs         : var(--font-size-xs);
+  --text-sm         : var(--font-size-sm);
+  --text-md         : var(--font-size-md);
+  --text-lg         : var(--font-size-lg);
+  --text-xl         : var(--font-size-xl);
+  --spacing-xs      : var(--space-xs);
+  --spacing-sm      : var(--space-sm);
+  --spacing-md      : var(--space-md);
+  --spacing-lg      : var(--space-lg);
+  --spacing-xl      : var(--space-xl);
+  --radius-xs       : calc(var(--radius) - 6px);
+  --radius-sm       : calc(var(--radius) - 4px);
+  --radius-md       : calc(var(--radius) - 2px);
+  --radius-lg       : calc(var(--radius) - 0.5px);
+  --radius-xl       : calc(var(--radius) + 2px);
+  --padding-xs      : var(--space-xs);
+  --padding-sm      : var(--space-sm);
+  --padding-md      : var(--space-md);
+  --padding-lg      : var(--space-lg);
+  --padding-xl      : var(--space-xl);
+  --margin-xs       : var(--space-xs);
+  --margin-sm       : var(--space-sm);
+  --margin-md       : var(--space-md);
+  --margin-lg       : var(--space-lg);
+  --margin-xl       : var(--space-xl);
+  --font-size-xl    : 3rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #121926;
-    --foreground: #F2F2F2;
+    --background              : var(--color-role-background-dark);
+    --foreground              : var(--color-role-foreground-dark);
+    --accent                  : var(--color-role-accent-dark);
+    --color-default-bg        : var(--color-intent-default-bg-dark);
+    --color-default-fg        : var(--color-intent-default-fg-dark);
+    --color-default-border    : var(--color-intent-default-border-dark);
+    --color-destructive-bg    : var(--color-intent-destructive-bg-dark);
+    --color-destructive-fg    : var(--color-intent-destructive-fg-dark);
+    --color-destructive-border: var(--color-intent-destructive-border-dark);
+    --border-color            : var(--color-role-border-dark);
+    --surface-1-bg            : var(--surface-1-bg-dark);
+    --surface-1-fg            : var(--surface-1-fg-dark);
+    --surface-1-border        : var(--surface-1-border-dark);
+    --surface-2-bg            : var(--surface-2-bg-dark);
+    --surface-2-fg            : var(--surface-2-fg-dark);
+    --surface-2-border        : var(--surface-2-border-dark);
+    --surface-3-bg            : var(--surface-3-bg-dark);
+    --surface-3-fg            : var(--surface-3-fg-dark);
+    --surface-3-border        : var(--surface-3-border-dark);
   }
 }
 
 body {
   background : var(--background);
   color      : var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-sans);
+  line-height: var(--font-line-height-base);
 }
