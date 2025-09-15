@@ -37,7 +37,7 @@
   --card-height             : var(--component-card-height);
   --home-title-height       : var(--component-page-home-title-height);
   --home-cards-rows         : var(--component-page-cards-rows);
-  --home-cards-height       : calc(var(--home-cards-rows) * var(--card-height) + var(--spacing-xl) * 2 + var(--home-title-height));
+  --home-cards-height       : calc(var(--home-cards-rows) * var(--card-height) + var(--spacing-xl) * 2 + var(--home-title-height) + var(--spacing-xl)) ;
 }
 
 @theme inline {
@@ -100,6 +100,13 @@ body {
   color      : var(--foreground);
   font-family: var(--font-family-sans);
   line-height: var(--font-line-height-base);
+}
+
+.show-on-hover { display: none; }
+.hide-on-hover { display: block; }
+@media (hover: hover) {
+  .show-on-hover { display: flex; }
+  .hide-on-hover { display: none; }
 }
 
 @keyframes shimmer {
