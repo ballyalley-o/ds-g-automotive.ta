@@ -210,7 +210,7 @@
         }
     },
     "card": {
-      "height": { "value": "420px", "type": "dimension" }
+      "height": { "value": "380px", "type": "dimension" }
     }
   }
 }
