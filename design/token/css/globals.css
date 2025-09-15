@@ -1,7 +1,7 @@
 @import './generated.css';
 @import "tailwindcss";
 
-:root {
+:root[data-theme='light'] {
   --background              : var(--color-role-background-light);
   --foreground              : var(--color-role-foreground-light);
   --accent                  : var(--color-role-accent-light);
@@ -23,7 +23,7 @@
   --surface-1-bg            : var(--surface-1-bg-light);
   --surface-1-fg            : var(--surface-1-fg-light);
   --surface-1-border        : var(--surface-1-border-light);
-  --surface-1-shadow        : var(--surface-1-shadow);
+  --shadow-lg               : var(--surface-1-shadow);
   --surface-2-bg            : var(--surface-2-bg-light);
   --surface-2-fg            : var(--surface-2-fg-light);
   --surface-2-border        : var(--surface-2-border-light);
@@ -37,7 +37,7 @@
   --card-height             : var(--component-card-height);
   --home-title-height       : var(--component-page-home-title-height);
   --home-cards-rows         : var(--component-page-cards-rows);
-  --home-cards-height       : calc(var(--home-cards-rows) * var(--card-height) + var(--spacing-xl) * 2 + var(--home-title-height) + var(--spacing-xl)) ;
+  --home-cards-height       : calc(var(--home-cards-rows) * var(--card-height) + var(--spacing-xl) * 2 + var(--home-title-height) + var(--spacing-xl));
 }
 
 @theme inline {
@@ -95,11 +95,44 @@
   }
 }
 
+:root[data-theme='dark'] {
+  --background              : var(--color-role-background-dark);
+  --foreground              : var(--color-role-foreground-dark);
+  --accent                  : var(--color-role-accent-dark);
+  --border-color            : var(--color-role-border-dark);
+  --color-default-bg        : var(--color-intent-default-bg-dark);
+  --color-default-fg        : var(--color-intent-default-fg-dark);
+  --color-default-border    : var(--color-intent-default-border-dark);
+  --color-destructive-bg    : var(--color-intent-destructive-bg-dark);
+  --color-destructive-fg    : var(--color-intent-destructive-fg-dark);
+  --color-destructive-border: var(--color-intent-destructive-border-dark);
+  --surface-1-bg            : var(--surface-1-bg-dark);
+  --surface-1-fg            : var(--surface-1-fg-dark);
+  --surface-1-border        : var(--surface-1-border-dark);
+  --surface-2-bg            : var(--surface-2-bg-dark);
+  --surface-2-fg            : var(--surface-2-fg-dark);
+  --surface-2-border        : var(--surface-2-border-dark);
+  --surface-3-bg            : var(--surface-3-bg-dark);
+  --surface-3-fg            : var(--surface-3-fg-dark);
+  --surface-3-border        : var(--surface-3-border-dark);
+  --card-height             : var(--component-card-height);
+  --home-title-height       : var(--component-page-home-title-height);
+  --home-cards-rows         : var(--component-page-cards-rows);
+  --home-cards-height       : calc(var(--home-cards-rows) * var(--card-height) + var(--spacing-xl) * 2 + var(--home-title-height) + var(--spacing-xl));
+}
+
 body {
   background : var(--background);
   color      : var(--foreground);
   font-family: var(--font-family-sans);
   line-height: var(--font-line-height-base);
+}
+
+.toggle {
+  @apply fixed cursor-pointer bottom-[length:var(--space-lg)] right-[length:var(--space-lg)] z-[var(--z-index-toast)]
+         inline-flex items-center gap-2 rounded-[length:var(--radius-lg)] border border-[color:var(--border-color)]
+         bg-[color:var(--surface-1-bg)] text-[color:var(--surface-1-fg)] shadow-[var(--shadow-sm)]
+         px-[length:var(--space-md)] py-[length:var(--space-xs)] hover:opacity-90
 }
 
 .show-on-hover { display: none; }
