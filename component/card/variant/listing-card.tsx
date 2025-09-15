@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import { cn } from 'lib/util'
 import { Card, CardBody, CardHeader, CardImage } from 'component/card'
 import { Button } from 'component/button'
+
+import { listingCardRootClass } from './listing-card.style'
 
 export type ListingCardProps = {
   className  ?: string
@@ -27,7 +28,7 @@ export type ListingCardProps = {
 
 const ListingCard: React.FC<ListingCardProps> = ({ className, surface = 1, title, description, image, cta, active }) => {
   return (
-    <Card surface={surface} className={cn('relative group w-[300px] h-[length:var(--card-height)] flex flex-col transition-colors duration-200', active && 'border-[color:var(--color-palette-brand)] shadow-[var(--shadow-md)] ring-2 ring-[color:var(--color-palette-brand)]', className)}>
+    <Card surface={surface} className={listingCardRootClass(!!active, className)}>
         <CardImage className="relative flex-shrink-0">
           <Image src={image.src} alt={image.alt ?? 'card-image'} width={image.width ?? 300} height={image.height ?? 150} priority={image.priority} className={"object-cover w-full h-auto"} />
         </CardImage>
