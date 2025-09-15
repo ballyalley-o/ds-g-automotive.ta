@@ -1,0 +1,53 @@
+[
+  {
+    "id"         : "listing-1",
+    "title"      : "Heading 1",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vel at ut, ducimus accusantium, consequuntur sapiente sit inventore commodi deleniti.",
+    "surface"    : 1,
+    "image"      : {
+      "src"   : "/asset/image/brisbane.jpg",
+      "alt"   : "Brisbane skyline",
+      "width" : 300,
+      "height": 150
+    },
+    "cta": {
+      "label"   : "Button 1",
+      "variant" : "default",
+      "disabled": false
+    }
+  },
+  {
+    "id"         : "listing-2",
+    "title"      : "Heading 2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit odit delectus distinctio qui nostrum? Minima iusto facilis nam doloribus enim.",
+    "surface"    : 2,
+    "image"      : {
+      "src"   : "/asset/image/brisbane.jpg",
+      "alt"   : "River view",
+      "width" : 300,
+      "height": 150
+    },
+    "cta": {
+      "label"   : "Button 2",
+      "variant" : "outline",
+      "disabled": false
+    }
+  },
+  {
+    "id"         : "listing-3",
+    "title"      : "Heading 3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. \n\n Ipsum molestias accusamus vitae architecto alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum molestias accusamus vitae architecto alias.",
+    "surface"    : 3,
+    "image"      : {
+      "src"   : "/asset/image/brisbane.jpg",
+      "alt"   : "City lights",
+      "width" : 300,
+      "height": 150
+    },
+    "cta": {
+      "label"   : "Button 3",
+      "variant" : "default",
+      "disabled": false
+    }
+  }
+]
