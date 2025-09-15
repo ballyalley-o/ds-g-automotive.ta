@@ -2,6 +2,7 @@ import { GLOBAL } from 'dealer-studio'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from 'sonner'
+import { ThemeToggle } from 'component/theme'
 
 import 'dealer-studio.css'
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${inter.variable} antialiased`}>
         {children}
         <Toaster position={'top-center'} className={'rounded-none'} richColors />
+        <ThemeToggle />
       </body>
     </html>
   )
