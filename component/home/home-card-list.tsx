@@ -16,7 +16,7 @@ const HomeCardList = ({ data }: { data: CardData[] }) => {
   }
 
   return (
-    <div className={"flex flex-wrap justify-center gap-lg pb-[length:var(--space-xl)] pb-[length:env(safe-area-inset-bottom)]"}>
+    <div className={"flex flex-wrap justify-center gap-lg pb-[length:env(safe-area-inset-bottom)]"}>
       {data.map((item, idx) => (
         <div key={item.id} ref={(el) => { cardRefs.current[item.id] = el }}>
           <ListingCard

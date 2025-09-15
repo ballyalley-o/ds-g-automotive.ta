@@ -11,7 +11,7 @@ const HomeCover = () => {
   return (
     <div className={'relative object-cover w-full h-auto lg:h-[calc(100dvh-var(--home-cards-height))]'}>
       <div className={'absolute inset-0 flex flex-col gap-4 items-center m-auto justify-center z-40'}>
-        <h1 className={'text-4xl font-bold'}>{formatText(COVER_TITLE, 'capitalize')}</h1>
+        <h1 className={'text-xl md:text-4xl font-bold'}>{formatText(COVER_TITLE, 'capitalize')}</h1>
         <Button label={formatText(COVER_BUTTON, 'capitalize')} />
       </div>
       <div className={'absolute inset-0 bg-gradient-to-b from-transparent to-background z-30'}></div>
