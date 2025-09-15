@@ -16,7 +16,7 @@ const HomeCardList = ({ data }: { data: CardData[] }) => {
   }
 
   return (
-    <div className="flex flex-wrap justify-center gap-lg">
+    <div className={"flex flex-wrap justify-center gap-lg pb-[length:var(--space-xl)] pb-[length:env(safe-area-inset-bottom)]"}>
       {data.map((item, idx) => (
         <div key={item.id} ref={(el) => { cardRefs.current[item.id] = el }}>
           <ListingCard
@@ -25,7 +25,7 @@ const HomeCardList = ({ data }: { data: CardData[] }) => {
             title={formatText(item.title, 'capitalize')}
             description={item.description}
             image={{ src: item.image.src, alt: item.image.alt }}
-            cta={{ disabled: false, onClick: () => handleSelect(idx, item.id), label: formatText('enquire now', 'capitalize') }}
+            cta={{ disabled: false, onClick: () => handleSelect(idx, item.id), label: formatText('click to switch', 'capitalize') }}
           />
         </div>
       ))}
@@ -34,4 +34,3 @@ const HomeCardList = ({ data }: { data: CardData[] }) => {
 }
 
 export default HomeCardList
-
