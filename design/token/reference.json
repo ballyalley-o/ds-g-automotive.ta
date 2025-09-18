@@ -3,7 +3,7 @@
     "palette": {
       "brand"      : { "value": "#387DFF" },
       "white"      : { "value": "#F2F2F2" },
-      "black"      : { "black": "#030303" },
+      "black"      : { "value": "#030303" },
       "blue"       : { "value": "#387DFF"},
       "dark-blue"  : { "value": "#121926" },
       "darker-blue": { "value": "#323948" },
@@ -89,11 +89,12 @@
   },
 
   "radius": {
-    "xs": { "value": "2px", "type": "dimension" },
-    "sm": { "value": "4px", "type": "dimension" },
-    "md": { "value": "8px", "type": "dimension" },
-    "lg": { "value": "12px", "type": "dimension" },
-    "xl": { "value": "16px", "type": "dimension" }
+    "base": { "value": "8px", "type": "dimension" },
+    "xs"  : { "value": "2px", "type": "dimension" },
+    "sm"  : { "value": "4px", "type": "dimension" },
+    "md"  : { "value": "8px", "type": "dimension" },
+    "lg"  : { "value": "12px", "type": "dimension" },
+    "xl"  : { "value": "16px", "type": "dimension" }
   },
 
   "space": {
